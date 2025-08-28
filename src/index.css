@@ -1,0 +1,175 @@
+/* 🌍 Reset & Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* 🚫 no sideways scroll */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  min-height: 100dvh; /* ✅ responsive viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ⬆️ keep top */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* only scroll if real content exceeds screen */
+}
+
+.app {
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 🚀 Prevent margin collapse from first element */
+.app > *:first-child {
+  margin-top: 0;
+}
+
+/* --- Title --- */
+.title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* --- Search --- */
+.weather-search {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* ✅ allows wrapping on small screens */
+  width: 100%;
+}
+
+.city-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  min-width: 0; /* 🚀 prevents overflow */
+}
+
+.search-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #0077b6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap; /* ✅ prevents button text from breaking weirdly */
+}
+
+/* --- Error Message --- */
+.error {
+  color: #ffdddd;
+  background: #ff4d4d;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* --- Weather Card --- */
+.weather-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* ✅ prevents overflow */
+}
+
+.weather-icon {
+  font-size: 3rem;
+}
+
+.weather-temprature {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 600px) {
+  .app {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .weather-search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  .weather-temprature {
+    font-size: 2rem;
+  }
+
+  .weather-icon {
+    font-size: 2.2rem;
+  }
+}
+
+/* 📱 Mobile & Small Devices */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .weather-search {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .city-input,
+  .search-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .weather-card {
+    padding: 1rem;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* 📱 Extra Small Devices (phones under 480px) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .weather-card {
+    font-size: 0.8rem;
+  }
+
+  .weather-details {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
