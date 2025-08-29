@@ -1,12 +1,51 @@
-# React + Vite
+# 🌤️ Weather Now
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Weather Now is a simple and reliable weather application built with **React + Vite**.  
+It allows users to search for any city and instantly view real-time weather updates, including temperature, humidity, wind speed, and an icon representing current conditions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- 🔍 Search weather by city name  
+- 🌡️ Display temperature, humidity, and wind speed  
+- 🎨 Clean and modern UI with dynamic weather icons  
+- ⚡ Fast and lightweight, powered by Vite  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Demo
+
+🔗 **Live App:** [https://6vh5np-5173.csb.app/](https://6vh5np-5173.csb.app/)  
+🎥 **Video Demonstration (Code + App Walkthrough):** [Add your video link here]  
+
+---
+
+## 🛠️ Tech Stack
+- **React** (UI library)  
+- **Vite** (build tool)  
+- **CSS** for styling  
+- **OpenWeatherMap API** (for weather data)  
+
+---
+Project Structure
+weather-now/
+├── public/          # Static assets
+├── src/             # Main source code
+│   ├── api.js       # Weather API calls
+│   ├── App.jsx      # Main application component
+│   ├── weatherCard.jsx # Weather display component
+│   ├── assets/      # Images and icons
+│   └── index.css    # Global styles
+└── package.json     # Project metadata & scripts
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/yourusername/weather-now.git
+cd weather-now
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Run Development Server
+npm run dev
